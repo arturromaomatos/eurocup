@@ -20,5 +20,11 @@
                                  referencedColumnNames="id"
                                  referencedTableName="euro_order_payment"/>
 
+        <addForeignKeyConstraint baseColumnNames="user_id"
+                                 baseTableName="euro_order"
+                                 constraintName="fk_euroorder_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+
     </changeSet>
 </databaseChangeLog>

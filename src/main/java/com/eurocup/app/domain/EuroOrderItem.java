@@ -32,6 +32,9 @@ public class EuroOrderItem implements Serializable {
     private BigDecimal totalPrice;
 
     @ManyToOne
+    private EuroOrder euroOrder;
+
+    @ManyToOne
     private EuroOrder order;
 
     @OneToOne
@@ -60,6 +63,14 @@ public class EuroOrderItem implements Serializable {
 
     public void setTotalPrice(BigDecimal totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    public EuroOrder getEuroOrder() {
+        return euroOrder;
+    }
+
+    public void setEuroOrder(EuroOrder euroOrder) {
+        this.euroOrder = euroOrder;
     }
 
     public EuroOrder getOrder() {

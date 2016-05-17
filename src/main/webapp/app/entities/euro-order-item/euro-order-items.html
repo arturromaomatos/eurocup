@@ -21,6 +21,7 @@
                     <th><span translate="global.field.id">ID</span></th>
                     <th><span translate="eurocupApp.euroOrderItem.quantity">Quantity</span></th>
                     <th><span translate="eurocupApp.euroOrderItem.totalPrice">Total Price</span></th>
+                    <th><span translate="eurocupApp.euroOrderItem.euroOrder">Euro Order</span></th>
                     <th><span translate="eurocupApp.euroOrderItem.order">Order</span></th>
                     <th><span translate="eurocupApp.euroOrderItem.ticket">Ticket</span></th>
                     <th></th>
@@ -31,6 +32,9 @@
                     <td><a ui-sref="euro-order-item-detail({id:euroOrderItem.id})">{{euroOrderItem.id}}</a></td>
                     <td>{{euroOrderItem.quantity}}</td>
                     <td>{{euroOrderItem.totalPrice}}</td>
+                    <td>
+                        <a ui-sref="euro-order-detail({id:euroOrderItem.euroOrderId})">{{euroOrderItem.euroOrderId}}</a>
+                    </td>
                     <td>
                         <a ui-sref="euro-order-detail({id:euroOrderItem.orderId})">{{euroOrderItem.orderId}}</a>
                     </td>

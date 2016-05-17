@@ -2,13 +2,20 @@
   "relationships": [
     {
       "relationshipId": 1,
+      "relationshipName": "euroOrder",
+      "otherEntityName": "euroOrder",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
       "relationshipType": "many-to-one",
       "relationshipName": "order",
       "otherEntityName": "euroOrder",
       "otherEntityField": "id"
     },
     {
-      "relationshipId": 2,
+      "relationshipId": 3,
       "relationshipType": "one-to-one",
       "relationshipName": "ticket",
       "otherEntityName": "euroTicket",

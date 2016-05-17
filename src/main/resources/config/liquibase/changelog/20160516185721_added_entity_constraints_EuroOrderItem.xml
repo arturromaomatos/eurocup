@@ -8,6 +8,12 @@
     -->
     <changeSet id="20160516185721-2" author="jhipster">
         
+        <addForeignKeyConstraint baseColumnNames="euro_order_id"
+                                 baseTableName="euro_order_item"
+                                 constraintName="fk_euroorderitem_euroorder_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="euro_order"/>
+
         <addForeignKeyConstraint baseColumnNames="order_id"
                                  baseTableName="euro_order_item"
                                  constraintName="fk_euroorderitem_order_id"

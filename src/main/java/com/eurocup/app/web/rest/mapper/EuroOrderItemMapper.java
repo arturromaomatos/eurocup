@@ -12,12 +12,14 @@ import java.util.List;
 @Mapper(componentModel = "spring", uses = {})
 public interface EuroOrderItemMapper {
 
+    @Mapping(source = "euroOrder.id", target = "euroOrderId")
     @Mapping(source = "order.id", target = "orderId")
     @Mapping(source = "ticket.id", target = "ticketId")
     EuroOrderItemDTO euroOrderItemToEuroOrderItemDTO(EuroOrderItem euroOrderItem);
 
     List<EuroOrderItemDTO> euroOrderItemsToEuroOrderItemDTOs(List<EuroOrderItem> euroOrderItems);
 
+    @Mapping(source = "euroOrderId", target = "euroOrder")
     @Mapping(source = "orderId", target = "order")
     @Mapping(source = "ticketId", target = "ticket")
     EuroOrderItem euroOrderItemDTOToEuroOrderItem(EuroOrderItemDTO euroOrderItemDTO);

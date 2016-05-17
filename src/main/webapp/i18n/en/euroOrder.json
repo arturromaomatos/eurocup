@@ -19,8 +19,10 @@
             "orderDate": "Order Date",
             "totalPrice": "Total Price",
             "paymentStatus": "Payment Status",
+            "item": "Item",
             "user": "User",
-            "payment": "Payment"
+            "payment": "Payment",
+            "user": "User"
         }
     }
 }

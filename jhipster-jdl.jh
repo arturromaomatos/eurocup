@@ -37,6 +37,14 @@ entity EuroOrderPayment {
     iban String
 }
 
+relationship OneToMany {
+	User{id} to EuroOrder
+}
+
+relationship OneToMany {
+	EuroOrder{item} to EuroOrderItem
+}
+
 relationship ManyToOne {
 	EuroOrder{user} to User
 }
