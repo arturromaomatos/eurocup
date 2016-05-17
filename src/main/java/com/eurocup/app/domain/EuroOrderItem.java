@@ -34,9 +34,6 @@ public class EuroOrderItem implements Serializable {
     @ManyToOne
     private EuroOrder euroOrder;
 
-    @ManyToOne
-    private EuroOrder order;
-
     @OneToOne
     @JoinColumn(unique = true)
     private EuroTicket ticket;
@@ -71,14 +68,6 @@ public class EuroOrderItem implements Serializable {
 
     public void setEuroOrder(EuroOrder euroOrder) {
         this.euroOrder = euroOrder;
-    }
-
-    public EuroOrder getOrder() {
-        return order;
-    }
-
-    public void setOrder(EuroOrder euroOrder) {
-        this.order = euroOrder;
     }
 
     public EuroTicket getTicket() {

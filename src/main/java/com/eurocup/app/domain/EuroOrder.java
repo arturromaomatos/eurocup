@@ -43,12 +43,12 @@ public class EuroOrder implements Serializable {
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
     private Set<EuroOrderItem> items = new HashSet<>();
 
+    @ManyToOne
+    private User user;
+
     @OneToOne
     @JoinColumn(unique = true)
     private EuroOrderPayment payment;
-
-    @ManyToOne
-    private User user;
 
     public Long getId() {
         return id;

@@ -50,7 +50,7 @@ relationship ManyToOne {
 }
 
 relationship ManyToOne {
-	EuroOrderItem{order} to EuroOrder
+	EuroOrderItem{euroOrder} to EuroOrder
 }
 
 relationship OneToOne {

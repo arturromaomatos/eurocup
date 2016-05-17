@@ -25,8 +25,6 @@ public class EuroOrderItemDTO implements Serializable {
 
     private Long euroOrderId;
     
-    private Long orderId;
-    
     private Long ticketId;
     
     public Long getId() {
@@ -57,14 +55,6 @@ public class EuroOrderItemDTO implements Serializable {
 
     public void setEuroOrderId(Long euroOrderId) {
         this.euroOrderId = euroOrderId;
-    }
-
-    public Long getOrderId() {
-        return orderId;
-    }
-
-    public void setOrderId(Long euroOrderId) {
-        this.orderId = euroOrderId;
     }
 
     public Long getTicketId() {

@@ -10,7 +10,7 @@
     {
       "relationshipId": 2,
       "relationshipType": "many-to-one",
-      "relationshipName": "order",
+      "relationshipName": "euroOrder",
       "otherEntityName": "euroOrder",
       "otherEntityField": "id"
     },

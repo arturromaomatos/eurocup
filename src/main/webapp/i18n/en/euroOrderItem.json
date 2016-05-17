@@ -19,7 +19,7 @@
             "quantity": "Quantity",
             "totalPrice": "Total Price",
             "euroOrder": "Euro Order",
-            "order": "Order",
+            "euroOrder": "Euro Order",
             "ticket": "Ticket"
         }
     }
