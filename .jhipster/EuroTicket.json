@@ -1,0 +1,93 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipType": "one-to-one",
+      "relationshipName": "name",
+      "otherEntityName": "euroOrderItem",
+      "ownerSide": false,
+      "otherEntityRelationshipName": "ticket"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "match",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "location",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "phase",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "matchgroup",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "matchDate",
+      "fieldType": "LocalDate",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "matchHour",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "price",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "image",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "totalTickets",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "nrOfTickets",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160516185722",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "euro_ticket"
+}

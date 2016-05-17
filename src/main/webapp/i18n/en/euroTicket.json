@@ -1,0 +1,32 @@
+{
+    "eurocupApp": {
+        "euroTicket" : {
+            "home": {
+                "title": "Euro Tickets",
+                "createLabel": "Create a new Euro Ticket",
+                "createOrEditLabel": "Create or edit a Euro Ticket",
+                "search": "Search for Euro Ticket"
+            },
+            "created": "A new Euro Ticket is created with identifier {{ param }}",
+            "updated": "A Euro Ticket is updated with identifier {{ param }}",
+            "deleted": "A Euro Ticket is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Euro Ticket {{ id }}?"
+            },
+            "detail": {
+                "title": "Euro Ticket"
+            },
+            "match": "Match",
+            "location": "Location",
+            "phase": "Phase",
+            "matchgroup": "Matchgroup",
+            "matchDate": "Match Date",
+            "matchHour": "Match Hour",
+            "price": "Price",
+            "image": "Image",
+            "totalTickets": "Total Tickets",
+            "nrOfTickets": "Nr Of Tickets",
+            "name": "Name"
+        }
+    }
+}

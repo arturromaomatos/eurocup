@@ -1,0 +1,150 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEuroTicketLabel" translate="eurocupApp.euroTicket.home.createOrEditLabel">Create or edit a Euro Ticket</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.euroTicket.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.euroTicket.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.match" for="field_match">Match</label>
+            <input type="text" class="form-control" name="match" id="field_match"
+                    ng-model="vm.euroTicket.match"
+                    required />
+            <div ng-show="editForm.match.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.match.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.location" for="field_location">Location</label>
+            <input type="text" class="form-control" name="location" id="field_location"
+                    ng-model="vm.euroTicket.location"
+                    required />
+            <div ng-show="editForm.location.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.location.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.phase" for="field_phase">Phase</label>
+            <input type="text" class="form-control" name="phase" id="field_phase"
+                    ng-model="vm.euroTicket.phase"
+                    required />
+            <div ng-show="editForm.phase.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.phase.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.matchgroup" for="field_matchgroup">Matchgroup</label>
+            <input type="text" class="form-control" name="matchgroup" id="field_matchgroup"
+                    ng-model="vm.euroTicket.matchgroup"
+                    required />
+            <div ng-show="editForm.matchgroup.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matchgroup.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.matchDate" for="field_matchDate">Match Date</label>
+                <div class="input-group">
+                    <input id="field_matchDate" type="text" class="form-control" name="matchDate" uib-datepicker-popup="{{dateformat}}" ng-model="vm.euroTicket.matchDate" is-open="vm.datePickerOpenStatus.matchDate"
+                    required/>
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('matchDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+            <div ng-show="editForm.matchDate.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.matchDate.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.matchHour" for="field_matchHour">Match Hour</label>
+            <input type="text" class="form-control" name="matchHour" id="field_matchHour"
+                    ng-model="vm.euroTicket.matchHour"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="vm.euroTicket.price"
+                    required />
+            <div ng-show="editForm.price.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.price.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.price.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.image" for="field_image">Image</label>
+            <input type="text" class="form-control" name="image" id="field_image"
+                    ng-model="vm.euroTicket.image"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.totalTickets" for="field_totalTickets">Total Tickets</label>
+            <input type="number" class="form-control" name="totalTickets" id="field_totalTickets"
+                    ng-model="vm.euroTicket.totalTickets"
+                    required />
+            <div ng-show="editForm.totalTickets.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.totalTickets.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.totalTickets.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroTicket.nrOfTickets" for="field_nrOfTickets">Nr Of Tickets</label>
+            <input type="number" class="form-control" name="nrOfTickets" id="field_nrOfTickets"
+                    ng-model="vm.euroTicket.nrOfTickets"
+                    required />
+            <div ng-show="editForm.nrOfTickets.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.nrOfTickets.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.nrOfTickets.$error.number" translate="entity.validation.number">
+                    This field should be a number.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

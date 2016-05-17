@@ -1,0 +1,53 @@
+
+<div>
+    <h2><span translate="eurocupApp.euroTicket.detail.title">Euro Ticket</span> {{vm.euroTicket.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="eurocupApp.euroTicket.match">Match</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.match}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.location">Location</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.location}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.phase">Phase</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.phase}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.matchgroup">Matchgroup</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.matchgroup}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.matchDate">Match Date</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.matchDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.matchHour">Match Hour</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.matchHour}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.price">Price</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.price}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.image">Image</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.image}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.totalTickets">Total Tickets</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.totalTickets}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroTicket.nrOfTickets">Nr Of Tickets</span></dt>
+        <dd>
+            <span>{{vm.euroTicket.nrOfTickets}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

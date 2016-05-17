@@ -1,0 +1,43 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "euroOrder",
+      "otherEntityName": "euroOrder",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipType": "one-to-one",
+      "relationshipName": "ticket",
+      "otherEntityName": "euroTicket",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "name"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "quantity",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160516185721",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "euro_order_item"
+}

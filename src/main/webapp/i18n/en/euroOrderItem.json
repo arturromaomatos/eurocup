@@ -1,0 +1,25 @@
+{
+    "eurocupApp": {
+        "euroOrderItem" : {
+            "home": {
+                "title": "Euro Order Items",
+                "createLabel": "Create a new Euro Order Item",
+                "createOrEditLabel": "Create or edit a Euro Order Item",
+                "search": "Search for Euro Order Item"
+            },
+            "created": "A new Euro Order Item is created with identifier {{ param }}",
+            "updated": "A Euro Order Item is updated with identifier {{ param }}",
+            "deleted": "A Euro Order Item is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Euro Order Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Euro Order Item"
+            },
+            "quantity": "Quantity",
+            "totalPrice": "Total Price",
+            "euroOrder": "Euro Order",
+            "ticket": "Ticket"
+        }
+    }
+}

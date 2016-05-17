@@ -1,0 +1,102 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myEuroOrderPaymentLabel" translate="eurocupApp.euroOrderPayment.home.createOrEditLabel">Create or edit a Euro Order Payment</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.euroOrderPayment.id">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.euroOrderPayment.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.method" for="field_method">Method</label>
+            <input type="text" class="form-control" name="method" id="field_method"
+                    ng-model="vm.euroOrderPayment.method"
+                    required />
+            <div ng-show="editForm.method.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.method.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.cardNumber" for="field_cardNumber">Card Number</label>
+            <input type="text" class="form-control" name="cardNumber" id="field_cardNumber"
+                    ng-model="vm.euroOrderPayment.cardNumber"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.month" for="field_month">Month</label>
+            <input type="text" class="form-control" name="month" id="field_month"
+                    ng-model="vm.euroOrderPayment.month"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.year" for="field_year">Year</label>
+            <input type="text" class="form-control" name="year" id="field_year"
+                    ng-model="vm.euroOrderPayment.year"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.cvc" for="field_cvc">Cvc</label>
+            <input type="text" class="form-control" name="cvc" id="field_cvc"
+                    ng-model="vm.euroOrderPayment.cvc"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.paymentEntity" for="field_paymentEntity">Payment Entity</label>
+            <input type="text" class="form-control" name="paymentEntity" id="field_paymentEntity"
+                    ng-model="vm.euroOrderPayment.paymentEntity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.paymentReference" for="field_paymentReference">Payment Reference</label>
+            <input type="text" class="form-control" name="paymentReference" id="field_paymentReference"
+                    ng-model="vm.euroOrderPayment.paymentReference"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.totalPrice" for="field_totalPrice">Total Price</label>
+            <input type="number" class="form-control" name="totalPrice" id="field_totalPrice"
+                    ng-model="vm.euroOrderPayment.totalPrice"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.cardCustName" for="field_cardCustName">Card Cust Name</label>
+            <input type="text" class="form-control" name="cardCustName" id="field_cardCustName"
+                    ng-model="vm.euroOrderPayment.cardCustName"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.paymentDate" for="field_paymentDate">Payment Date</label>
+                <div class="input-group">
+                    <input id="field_paymentDate" type="text" class="form-control" name="paymentDate" datetime-picker="{{dateformat}}" ng-model="vm.euroOrderPayment.paymentDate" is-open="vm.datePickerOpenStatus.paymentDate"
+                      />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('paymentDate')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="eurocupApp.euroOrderPayment.iban" for="field_iban">Iban</label>
+            <input type="text" class="form-control" name="iban" id="field_iban"
+                    ng-model="vm.euroOrderPayment.iban"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

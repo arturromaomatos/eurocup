@@ -1,0 +1,68 @@
+{
+  "relationships": [],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "method",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "cardNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "month",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "year",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "cvc",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "paymentEntity",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "paymentReference",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "totalPrice",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "cardCustName",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "paymentDate",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 11,
+      "fieldName": "iban",
+      "fieldType": "String"
+    }
+  ],
+  "changelogDate": "20160516185723",
+  "dto": "mapstruct",
+  "pagination": "no",
+  "service": "no",
+  "entityTableName": "euro_order_payment"
+}

@@ -1,0 +1,29 @@
+
+<div>
+    <h2><span translate="eurocupApp.euroOrderItem.detail.title">Euro Order Item</span> {{vm.euroOrderItem.id}}</h2>
+    <hr>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span translate="eurocupApp.euroOrderItem.quantity">Quantity</span></dt>
+        <dd>
+            <span>{{vm.euroOrderItem.quantity}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroOrderItem.totalPrice">Total Price</span></dt>
+        <dd>
+            <span>{{vm.euroOrderItem.totalPrice}}</span>
+        </dd>
+        <dt><span translate="eurocupApp.euroOrderItem.euroOrder">Euro Order</span></dt>
+        <dd>
+            <a ui-sref="euro-order-detail({id:vm.euroOrderItem.euroOrderId})">{{vm.euroOrderItem.euroOrderId}}</a>
+        </dd>
+        <dt><span translate="eurocupApp.euroOrderItem.ticket">Ticket</span></dt>
+        <dd>
+            <a ui-sref="euro-ticket-detail({id:vm.euroOrderItem.ticketId})">{{vm.euroOrderItem.ticketId}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

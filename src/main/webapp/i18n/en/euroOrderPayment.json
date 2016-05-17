@@ -1,0 +1,32 @@
+{
+    "eurocupApp": {
+        "euroOrderPayment" : {
+            "home": {
+                "title": "Euro Order Payments",
+                "createLabel": "Create a new Euro Order Payment",
+                "createOrEditLabel": "Create or edit a Euro Order Payment",
+                "search": "Search for Euro Order Payment"
+            },
+            "created": "A new Euro Order Payment is created with identifier {{ param }}",
+            "updated": "A Euro Order Payment is updated with identifier {{ param }}",
+            "deleted": "A Euro Order Payment is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Euro Order Payment {{ id }}?"
+            },
+            "detail": {
+                "title": "Euro Order Payment"
+            },
+            "method": "Method",
+            "cardNumber": "Card Number",
+            "month": "Month",
+            "year": "Year",
+            "cvc": "Cvc",
+            "paymentEntity": "Payment Entity",
+            "paymentReference": "Payment Reference",
+            "totalPrice": "Total Price",
+            "cardCustName": "Card Cust Name",
+            "paymentDate": "Payment Date",
+            "iban": "Iban"
+        }
+    }
+}

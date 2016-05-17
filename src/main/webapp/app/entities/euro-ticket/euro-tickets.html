@@ -1,0 +1,74 @@
+<div>
+    <h2 translate="eurocupApp.euroTicket.home.title">Euro Tickets</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="euro-ticket.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  translate="eurocupApp.euroTicket.home.createLabel">
+                        Create new Euro Ticket
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="eurocupApp.euroTicket.match">Match</span></th>
+                    <th><span translate="eurocupApp.euroTicket.location">Location</span></th>
+                    <th><span translate="eurocupApp.euroTicket.phase">Phase</span></th>
+                    <th><span translate="eurocupApp.euroTicket.matchgroup">Matchgroup</span></th>
+                    <th><span translate="eurocupApp.euroTicket.matchDate">Match Date</span></th>
+                    <th><span translate="eurocupApp.euroTicket.matchHour">Match Hour</span></th>
+                    <th><span translate="eurocupApp.euroTicket.price">Price</span></th>
+                    <th><span translate="eurocupApp.euroTicket.image">Image</span></th>
+                    <th><span translate="eurocupApp.euroTicket.totalTickets">Total Tickets</span></th>
+                    <th><span translate="eurocupApp.euroTicket.nrOfTickets">Nr Of Tickets</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="euroTicket in vm.euroTickets track by euroTicket.id">
+                    <td><a ui-sref="euro-ticket-detail({id:euroTicket.id})">{{euroTicket.id}}</a></td>
+                    <td>{{euroTicket.match}}</td>
+                    <td>{{euroTicket.location}}</td>
+                    <td>{{euroTicket.phase}}</td>
+                    <td>{{euroTicket.matchgroup}}</td>
+                        <td>{{euroTicket.matchDate | date:'mediumDate'}}</td>
+                    <td>{{euroTicket.matchHour}}</td>
+                    <td>{{euroTicket.price}}</td>
+                    <td>{{euroTicket.image}}</td>
+                    <td>{{euroTicket.totalTickets}}</td>
+                    <td>{{euroTicket.nrOfTickets}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="euro-ticket-detail({id:euroTicket.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="euro-ticket.edit({id:euroTicket.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="euro-ticket.delete({id:euroTicket.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

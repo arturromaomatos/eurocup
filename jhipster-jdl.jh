@@ -1,0 +1,60 @@
+
+entity EuroOrder {
+    orderDate ZonedDateTime required,
+    totalPrice BigDecimal,
+    paymentStatus String required
+}
+
+entity EuroOrderItem {
+	quantity Long required,
+    totalPrice BigDecimal required
+}
+
+entity EuroTicket {
+	match String required,
+    location String required,
+    phase String required,
+    matchgroup String required,
+    matchDate LocalDate required,
+    matchHour String,
+    price BigDecimal required,
+    image String,
+    totalTickets Long required,
+    nrOfTickets Long required
+}
+
+entity EuroOrderPayment {
+	method String required,
+    cardNumber String,
+    month String,
+    year String,
+    cvc String,
+    paymentEntity String,
+    paymentReference String,
+    totalPrice BigDecimal,
+    cardCustName String,
+    paymentDate ZonedDateTime,
+    iban String
+}
+
+relationship OneToMany {
+	User{id} to EuroOrder
+}
+
+relationship OneToMany {
+	EuroOrder{item} to EuroOrderItem
+}
+
+relationship OneToOne {
+	EuroOrderItem{ticket} to EuroTicket{name}
+}
+
+relationship OneToOne {
+	EuroOrder{payment} to EuroOrderPayment
+}
+
+
+dto EuroOrder, EuroTicket, EuroOrderItem, EuroOrderPayment with mapstruct
+
+
+	
