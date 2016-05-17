@@ -22,8 +22,8 @@
                     <th><span translate="eurocupApp.euroOrder.orderDate">Order Date</span></th>
                     <th><span translate="eurocupApp.euroOrder.totalPrice">Total Price</span></th>
                     <th><span translate="eurocupApp.euroOrder.paymentStatus">Payment Status</span></th>
-                    <th><span translate="eurocupApp.euroOrder.payment">Payment</span></th>
                     <th><span translate="eurocupApp.euroOrder.user">User</span></th>
+                    <th><span translate="eurocupApp.euroOrder.payment">Payment</span></th>
                     <th></th>
                 </tr>
             </thead>
@@ -34,10 +34,10 @@
                     <td>{{euroOrder.totalPrice}}</td>
                     <td>{{euroOrder.paymentStatus}}</td>
                     <td>
-                        <a ui-sref="euro-order-payment-detail({id:euroOrder.paymentId})">{{euroOrder.paymentId}}</a>
+                        {{euroOrder.userId}}
                     </td>
                     <td>
-                        {{euroOrder.userId}}
+                        <a ui-sref="euro-order-payment-detail({id:euroOrder.paymentId})">{{euroOrder.paymentId}}</a>
                     </td>
                     <td class="text-right">
                         <div class="btn-group flex-btn-group-container">

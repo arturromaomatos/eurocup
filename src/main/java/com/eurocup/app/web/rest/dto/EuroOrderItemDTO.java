@@ -23,7 +23,7 @@ public class EuroOrderItemDTO implements Serializable {
     private BigDecimal totalPrice;
 
 
-    private Long euroOrderId;
+    private Long orderId;
     
     private Long ticketId;
     
@@ -49,12 +49,12 @@ public class EuroOrderItemDTO implements Serializable {
         this.totalPrice = totalPrice;
     }
 
-    public Long getEuroOrderId() {
-        return euroOrderId;
+    public Long getOrderId() {
+        return orderId;
     }
 
-    public void setEuroOrderId(Long euroOrderId) {
-        this.euroOrderId = euroOrderId;
+    public void setOrderId(Long euroOrderId) {
+        this.orderId = euroOrderId;
     }
 
     public Long getTicketId() {

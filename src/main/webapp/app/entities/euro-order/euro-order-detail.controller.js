@@ -5,9 +5,9 @@
         .module('eurocupApp')
         .controller('EuroOrderDetailController', EuroOrderDetailController);
 
-    EuroOrderDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'EuroOrder', 'EuroOrderItem', 'EuroOrderPayment', 'User'];
+    EuroOrderDetailController.$inject = ['$scope', '$rootScope', '$stateParams', 'entity', 'EuroOrder', 'User', 'EuroOrderPayment'];
 
-    function EuroOrderDetailController($scope, $rootScope, $stateParams, entity, EuroOrder, EuroOrderItem, EuroOrderPayment, User) {
+    function EuroOrderDetailController($scope, $rootScope, $stateParams, entity, EuroOrder, User, EuroOrderPayment) {
         var vm = this;
         vm.euroOrder = entity;
         

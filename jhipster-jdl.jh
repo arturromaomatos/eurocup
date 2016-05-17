@@ -37,12 +37,12 @@ entity EuroOrderPayment {
     iban String
 }
 
-relationship OneToMany {
-	User{id} to EuroOrder
+relationship ManyToOne {
+	EuroOrder{user} to User
 }
 
-relationship OneToMany {
-	EuroOrder{item} to EuroOrderItem
+relationship ManyToOne {
+	EuroOrderItem{order} to EuroOrder
 }
 
 relationship OneToOne {
@@ -57,4 +57,3 @@ relationship OneToOne {
 dto EuroOrder, EuroTicket, EuroOrderItem, EuroOrderPayment with mapstruct
 
 
-	

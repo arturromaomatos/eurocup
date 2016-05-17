@@ -27,9 +27,9 @@ public class EuroOrderDTO implements Serializable {
     private String paymentStatus;
 
 
-    private Long paymentId;
-    
     private Long userId;
+    
+    private Long paymentId;
     
     public Long getId() {
         return id;
@@ -60,20 +60,20 @@ public class EuroOrderDTO implements Serializable {
         this.paymentStatus = paymentStatus;
     }
 
-    public Long getPaymentId() {
-        return paymentId;
-    }
-
-    public void setPaymentId(Long euroOrderPaymentId) {
-        this.paymentId = euroOrderPaymentId;
-    }
-
     public Long getUserId() {
         return userId;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public Long getPaymentId() {
+        return paymentId;
+    }
+
+    public void setPaymentId(Long euroOrderPaymentId) {
+        this.paymentId = euroOrderPaymentId;
     }
 
     @Override

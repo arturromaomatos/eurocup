@@ -15,13 +15,13 @@
         <dd>
             <span>{{vm.euroOrder.paymentStatus}}</span>
         </dd>
-        <dt><span translate="eurocupApp.euroOrder.payment">Payment</span></dt>
-        <dd>
-            <a ui-sref="euro-order-payment-detail({id:vm.euroOrder.paymentId})">{{vm.euroOrder.paymentId}}</a>
-        </dd>
         <dt><span translate="eurocupApp.euroOrder.user">User</span></dt>
         <dd>
             {{vm.euroOrder.userId}}
+        </dd>
+        <dt><span translate="eurocupApp.euroOrder.payment">Payment</span></dt>
+        <dd>
+            <a ui-sref="euro-order-payment-detail({id:vm.euroOrder.paymentId})">{{vm.euroOrder.paymentId}}</a>
         </dd>
     </dl>
 

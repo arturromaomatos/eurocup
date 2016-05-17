@@ -5,12 +5,12 @@
         .module('eurocupApp')
         .controller('EuroOrderDialogController', EuroOrderDialogController);
 
-    EuroOrderDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'EuroOrder', 'EuroOrderItem', 'EuroOrderPayment', 'User'];
+    EuroOrderDialogController.$inject = ['$timeout', '$scope', '$stateParams', '$uibModalInstance', '$q', 'entity', 'EuroOrder', 'User', 'EuroOrderPayment'];
 
-    function EuroOrderDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, EuroOrder, EuroOrderItem, EuroOrderPayment, User) {
+    function EuroOrderDialogController ($timeout, $scope, $stateParams, $uibModalInstance, $q, entity, EuroOrder, User, EuroOrderPayment) {
         var vm = this;
         vm.euroOrder = entity;
-        vm.euroorderitems = EuroOrderItem.query();
+        vm.users = User.query();
         vm.payments = EuroOrderPayment.query({filter: 'euroorder-is-null'});
         $q.all([vm.euroOrder.$promise, vm.payments.$promise]).then(function() {
             if (!vm.euroOrder.paymentId) {
@@ -20,7 +20,6 @@
         }).then(function(payment) {
             vm.payments.push(payment);
         });
-        vm.users = User.query();
 
         $timeout(function (){
             angular.element('.form-group:eq(1)>input').focus();

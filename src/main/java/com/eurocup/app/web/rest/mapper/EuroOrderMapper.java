@@ -12,15 +12,14 @@ import java.util.List;
 @Mapper(componentModel = "spring", uses = {UserMapper.class, })
 public interface EuroOrderMapper {
 
-    @Mapping(source = "payment.id", target = "paymentId")
     @Mapping(source = "user.id", target = "userId")
+    @Mapping(source = "payment.id", target = "paymentId")
     EuroOrderDTO euroOrderToEuroOrderDTO(EuroOrder euroOrder);
 
     List<EuroOrderDTO> euroOrdersToEuroOrderDTOs(List<EuroOrder> euroOrders);
 
-    @Mapping(target = "items", ignore = true)
-    @Mapping(source = "paymentId", target = "payment")
     @Mapping(source = "userId", target = "user")
+    @Mapping(source = "paymentId", target = "payment")
     EuroOrder euroOrderDTOToEuroOrder(EuroOrderDTO euroOrderDTO);
 
     List<EuroOrder> euroOrderDTOsToEuroOrders(List<EuroOrderDTO> euroOrderDTOs);

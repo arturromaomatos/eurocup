@@ -8,17 +8,17 @@
     -->
     <changeSet id="20160516185720-2" author="jhipster">
         
-        <addForeignKeyConstraint baseColumnNames="payment_id"
-                                 baseTableName="euro_order"
-                                 constraintName="fk_euroorder_payment_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="euro_order_payment"/>
-
         <addForeignKeyConstraint baseColumnNames="user_id"
                                  baseTableName="euro_order"
                                  constraintName="fk_euroorder_user_id"
                                  referencedColumnNames="id"
                                  referencedTableName="jhi_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="payment_id"
+                                 baseTableName="euro_order"
+                                 constraintName="fk_euroorder_payment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="euro_order_payment"/>
 
     </changeSet>
 </databaseChangeLog>

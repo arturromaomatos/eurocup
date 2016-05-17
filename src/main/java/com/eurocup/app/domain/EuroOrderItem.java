@@ -32,7 +32,7 @@ public class EuroOrderItem implements Serializable {
     private BigDecimal totalPrice;
 
     @ManyToOne
-    private EuroOrder euroOrder;
+    private EuroOrder order;
 
     @OneToOne
     @JoinColumn(unique = true)
@@ -62,12 +62,12 @@ public class EuroOrderItem implements Serializable {
         this.totalPrice = totalPrice;
     }
 
-    public EuroOrder getEuroOrder() {
-        return euroOrder;
+    public EuroOrder getOrder() {
+        return order;
     }
 
-    public void setEuroOrder(EuroOrder euroOrder) {
-        this.euroOrder = euroOrder;
+    public void setOrder(EuroOrder euroOrder) {
+        this.order = euroOrder;
     }
 
     public EuroTicket getTicket() {

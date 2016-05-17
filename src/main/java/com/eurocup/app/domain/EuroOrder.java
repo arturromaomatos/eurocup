@@ -1,6 +1,5 @@
 package com.eurocup.app.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
@@ -9,8 +8,6 @@ import javax.validation.constraints.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.ZonedDateTime;
-import java.util.HashSet;
-import java.util.Set;
 import java.util.Objects;
 
 /**
@@ -38,17 +35,12 @@ public class EuroOrder implements Serializable {
     @Column(name = "payment_status", nullable = false)
     private String paymentStatus;
 
-    @OneToMany(mappedBy = "euroOrder")
-    @JsonIgnore
-    @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
-    private Set<EuroOrderItem> items = new HashSet<>();
+    @ManyToOne
+    private User user;
 
     @OneToOne
     @JoinColumn(unique = true)
     private EuroOrderPayment payment;
-
-    @ManyToOne
-    private User user;
 
     public Long getId() {
         return id;
@@ -82,12 +74,12 @@ public class EuroOrder implements Serializable {
         this.paymentStatus = paymentStatus;
     }
 
-    public Set<EuroOrderItem> getItems() {
-        return items;
+    public User getUser() {
+        return user;
     }
 
-    public void setItems(Set<EuroOrderItem> euroOrderItems) {
-        this.items = euroOrderItems;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public EuroOrderPayment getPayment() {
@@ -96,14 +88,6 @@ public class EuroOrder implements Serializable {
 
     public void setPayment(EuroOrderPayment euroOrderPayment) {
         this.payment = euroOrderPayment;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @Override
