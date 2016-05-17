@@ -13,13 +13,11 @@ import java.util.List;
 public interface EuroOrderItemMapper {
 
     @Mapping(source = "euroOrder.id", target = "euroOrderId")
-    @Mapping(source = "euroOrder.id", target = "euroOrderId")
     @Mapping(source = "ticket.id", target = "ticketId")
     EuroOrderItemDTO euroOrderItemToEuroOrderItemDTO(EuroOrderItem euroOrderItem);
 
     List<EuroOrderItemDTO> euroOrderItemsToEuroOrderItemDTOs(List<EuroOrderItem> euroOrderItems);
 
-    @Mapping(source = "euroOrderId", target = "euroOrder")
     @Mapping(source = "euroOrderId", target = "euroOrder")
     @Mapping(source = "ticketId", target = "ticket")
     EuroOrderItem euroOrderItemDTOToEuroOrderItem(EuroOrderItemDTO euroOrderItemDTO);

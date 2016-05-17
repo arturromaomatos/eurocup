@@ -33,9 +33,6 @@
                 <constraints nullable="true" />
             </column>
 
-            <column name="euro_order_id" type="bigint">
-                <constraints nullable="true" />
-            </column>
             <column name="ticket_id" type="bigint">
                 <constraints unique="true" nullable="true" />
             </column>

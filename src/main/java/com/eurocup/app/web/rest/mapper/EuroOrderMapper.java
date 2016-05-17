@@ -14,7 +14,6 @@ public interface EuroOrderMapper {
 
     @Mapping(source = "user.id", target = "userId")
     @Mapping(source = "payment.id", target = "paymentId")
-    @Mapping(source = "user.id", target = "userId")
     EuroOrderDTO euroOrderToEuroOrderDTO(EuroOrder euroOrder);
 
     List<EuroOrderDTO> euroOrdersToEuroOrderDTOs(List<EuroOrder> euroOrders);
@@ -22,7 +21,6 @@ public interface EuroOrderMapper {
     @Mapping(target = "items", ignore = true)
     @Mapping(source = "userId", target = "user")
     @Mapping(source = "paymentId", target = "payment")
-    @Mapping(source = "userId", target = "user")
     EuroOrder euroOrderDTOToEuroOrder(EuroOrderDTO euroOrderDTO);
 
     List<EuroOrder> euroOrderDTOsToEuroOrders(List<EuroOrderDTO> euroOrderDTOs);

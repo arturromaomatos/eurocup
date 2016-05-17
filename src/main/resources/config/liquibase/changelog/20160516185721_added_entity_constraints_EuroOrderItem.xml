@@ -14,12 +14,6 @@
                                  referencedColumnNames="id"
                                  referencedTableName="euro_order"/>
 
-        <addForeignKeyConstraint baseColumnNames="euro_order_id"
-                                 baseTableName="euro_order_item"
-                                 constraintName="fk_euroorderitem_euroorder_id"
-                                 referencedColumnNames="id"
-                                 referencedTableName="euro_order"/>
-
         <addForeignKeyConstraint baseColumnNames="ticket_id"
                                  baseTableName="euro_order_item"
                                  constraintName="fk_euroorderitem_ticket_id"
